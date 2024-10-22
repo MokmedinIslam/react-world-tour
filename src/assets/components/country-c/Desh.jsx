@@ -9,7 +9,7 @@ const Desh = ({country, handleVisitedCountries}) => {
         setVisited(!visited)
     }
 
-    console.log(handleVisitedCountries);
+    const passWithParams = () => handleVisitedCountries(country);
 
     return (
         <div className={`country ${visited ? 'visited': 'non-visited'} `}>
@@ -18,7 +18,7 @@ const Desh = ({country, handleVisitedCountries}) => {
             <p>Population: {population}</p>
             <p>Area: {area}</p>
             <p><small>Code: {cca3}</small></p>
-            <button onClick={handleVisitedCountries}>Mark visited</button>
+            <button onClick={() => handleVisitedCountries(country)}>Mark visited</button>
             <br />
             <button onClick={handleVisited}>{visited? 'Visited': 'Going'}</button>
             {visited ? 'I have visited this country.': 'I want to visit.'}
