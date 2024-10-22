@@ -9,3 +9,6 @@
     background: beige;
     color: black;
 }
+.flag-container img {
+    width: 50px;
+}
